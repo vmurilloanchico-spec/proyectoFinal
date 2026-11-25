@@ -1,4 +1,4 @@
-import { existsSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 if (existsSync(".env")) process.loadEnvFile(".env");
 const { SUPABASE_URL: url = "", SUPABASE_PUBLISHABLE_KEY: key = "" } =
   process.env;
@@ -10,6 +10,7 @@ if (
 ) {
   throw new Error("Utilicen la clave publishable o anon.");
 }
+mkdirSync("public", { recursive: true });
 writeFileSync(
   "public/config.js",
   "window.rondaConfig = " + JSON.stringify({ url, key }) + ";",
