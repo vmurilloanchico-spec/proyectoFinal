@@ -1,0 +1,427 @@
+<!DOCTYPE html><html lang="es"><meta charset="utf-8"><title>Ronda · Propuesta gráfica</title><style>:root {
+  --papel: #f6f2e8;
+  --tinta: #212e26;
+  --verde: #204b38;
+  --linea: #c5c5b5;
+  --naranja: #f2a65a;
+  font:
+    16px/1.5 "Trebuchet MS",
+    Arial,
+    sans-serif;
+  color: var(--tinta);
+  background: var(--papel);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+nav,
+footer,
+main {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 5vw;
+}
+nav {
+  height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--linea);
+}
+nav div,
+.filtros {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav a {
+  text-decoration: none;
+}
+a {
+  color: var(--verde);
+  text-underline-offset: 4px;
+}
+a:hover {
+  text-decoration: underline;
+}
+.marca {
+  font: bold 32px Georgia;
+  color: var(--tinta);
+}
+.marca i {
+  color: #b44b26;
+  font-style: normal;
+}
+.nav-login,
+button,
+.boton {
+  border: 1px solid var(--linea);
+  border-radius: 5px;
+  padding: 8px 14px;
+  background: transparent;
+  color: var(--verde);
+  font: inherit;
+  cursor: pointer;
+}
+.boton,
+.activo,
+.nav-login {
+  display: inline-block;
+  background: var(--verde);
+  color: white;
+  text-decoration: none;
+  border-color: var(--verde);
+}
+button:disabled {
+  opacity: 0.53;
+  cursor: default;
+}
+main {
+  min-height: 75vh;
+  padding-top: 32px;
+  padding-bottom: 56px;
+}
+footer {
+  padding-top: 18px;
+  padding-bottom: 24px;
+  border-top: 1px solid var(--linea);
+  font-size: 0.9rem;
+}
+h1,
+h2,
+h3,
+.portada b {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.08;
+  font-weight: 500;
+}
+h1 {
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  margin: 12px 0 20px;
+  letter-spacing: -0.055em;
+}
+h2 {
+  font-size: 2.3rem;
+  margin: 12px 0;
+}
+h3 {
+  font-size: 1.7rem;
+  margin: 6px 0;
+}
+small {
+  font-size: 0.73rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.hero {
+  background: #173e31;
+  color: #fff9e8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 5%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.hero p {
+  max-width: 440px;
+}
+.hero h1 span {
+  color: var(--naranja);
+}
+.hero small {
+  color: #f6c79b;
+}
+.shelf {
+  display: flex;
+  align-items: end;
+  height: 136px;
+  gap: 6px;
+  border-bottom: 6px solid #e5c99d;
+  margin-right: 15px;
+}
+.shelf i {
+  height: 85%;
+  width: 29px;
+  background: repeating-linear-gradient(
+    0deg,
+    #ecab69 0 9px,
+    #824e32 10px 12px,
+    #ecab69 13px 27px
+  );
+  border-radius: 3px;
+}
+.shelf i:nth-child(even) {
+  height: 100%;
+  background: repeating-linear-gradient(90deg, #cfdfb1 0 5px, #94ab80 6px 8px);
+}
+.shelf i:last-child {
+  transform: rotate(-13deg);
+  transform-origin: bottom;
+  height: 70%;
+  background: #d87955;
+}
+.section-head,
+.fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.section-head {
+  margin-top: 28px;
+}
+.filtros {
+  margin: 12px 0 22px;
+}
+input,
+textarea {
+  color: var(--tinta);
+  font: inherit;
+  background: #fffdf6;
+  border: 1px solid #a3ac9f;
+  border-radius: 5px;
+  padding: 10px 12px;
+}
+.filtros input {
+  width: min(320px, 100%);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.tarjeta {
+  display: block;
+  border: 1px solid var(--linea);
+  border-radius: 7px;
+  overflow: hidden;
+  text-decoration: none;
+  background: #fffdf6;
+  height: 100%;
+}
+.tarjeta:hover {
+  text-decoration: none;
+  box-shadow: 0 3px 12px #29442f22;
+}
+.ficha {
+  padding: 17px;
+}
+.ficha p {
+  margin: 10px 0 20px;
+}
+.ficha span,
+.enlace {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.portada {
+  position: relative;
+  min-height: 160px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  overflow: hidden;
+  isolation: isolate;
+  color: #fff9e9;
+}
+.portada b {
+  font-size: 2rem;
+  max-width: 70%;
+  text-shadow: 0 1px 3px #0004;
+}
+.portada i {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.selva {
+  background: #30553d;
+}
+.selva i {
+  background: repeating-radial-gradient(
+    ellipse at 105% 95%,
+    transparent 0 11px,
+    #77936a 12px 16px,
+    transparent 17px 24px
+  );
+}
+.laberinto {
+  background: #b65631;
+}
+.laberinto i {
+  background: repeating-linear-gradient(
+    42deg,
+    transparent 0 12px,
+    #de8e5e 13px 17px,
+    transparent 18px 24px
+  );
+  clip-path: polygon(30% 0, 100% 0, 100% 100%);
+}
+.luna {
+  background: #575779;
+}
+.luna i {
+  background:
+    radial-gradient(circle at 75% 32%, #eed6a8 0 19%, transparent 19.5%),
+    repeating-linear-gradient(180deg, transparent 0 22px, #72728c 23px 24px);
+}
+.valle {
+  background: #325b60;
+}
+.valle i {
+  background: repeating-radial-gradient(
+    ellipse at 85% 130%,
+    #567d77 0 16px,
+    #26494b 17px 32px
+  );
+}
+.detalle {
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) 2fr;
+  gap: 5%;
+  margin-top: 26px;
+}
+.grande {
+  min-height: 340px;
+  border-radius: 6px;
+}
+.grande b {
+  font-size: 3.4rem;
+}
+.detalle section {
+  align-self: center;
+}
+.detalle .enlace,
+.fila .enlace {
+  display: inline-block;
+  margin-right: 18px;
+}
+.panel,
+.chat,
+.fila {
+  background: #fffdf6;
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  padding: clamp(20px, 4vw, 44px);
+  margin: 20px auto;
+}
+.panel {
+  max-width: 480px;
+}
+.panel h1,
+.chat h1 {
+  font-size: 3rem;
+}
+form,
+label {
+  display: grid;
+  gap: 8px;
+}
+form {
+  gap: 18px;
+}
+label {
+  font-weight: bold;
+}
+textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+.chat {
+  max-width: 740px;
+}
+.mensajes {
+  background: var(--papel);
+  border-radius: 6px;
+  padding: 15px;
+  max-height: 45vh;
+  overflow: auto;
+  margin: 16px 0;
+}
+.mensajes article {
+  background: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin: 8px 0;
+  width: fit-content;
+  max-width: 85%;
+  overflow-wrap: anywhere;
+}
+.mensajes p {
+  margin: 3px 0;
+  white-space: pre-wrap;
+}
+.mensajes .mio {
+  background: #d9e8d4;
+  margin-left: auto;
+}
+.fila h2 {
+  font-size: 1.9rem;
+}
+.fila p {
+  margin: 0;
+}
+:focus-visible {
+  outline: 3px solid #af5e2f;
+  outline-offset: 3px;
+}
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .shelf {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 580px) {
+  nav {
+    height: auto;
+    min-height: 66px;
+    gap: 12px;
+  }
+  nav div {
+    justify-content: flex-end;
+    gap: 8px;
+    font-size: 0.85rem;
+  }
+  .marca {
+    font-size: 26px;
+  }
+  .shelf {
+    display: none;
+  }
+  .section-head,
+  .fila {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .hero {
+    padding: 28px 20px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .detalle {
+    grid-template-columns: 1fr;
+  }
+  .grande {
+    min-height: 175px;
+  }
+  .detalle section {
+    margin-top: 16px;
+  }
+  .filtros {
+    gap: 6px;
+  }
+  .filtros input {
+    width: 100%;
+  }
+}
+@page{size:320mm 232mm;margin:0}.lamina{break-after:page;min-height:232mm}.lamina:last-child{break-after:auto}aside{background:#e5e1d4;padding:9px 5%;font-size:12px;font-weight:bold;letter-spacing:.12em}main{min-height:0}body{-webkit-print-color-adjust:exact;print-color-adjust:exact} @media print{.hero{padding:24px 5%}main{padding-top:20px;padding-bottom:14px}.chat,.panel{margin:8px auto}.portada{min-height:134px}.grande{min-height:340px}.section-head{margin-top:15px}}@media print{.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.ficha{padding:12px}.hero{padding:22px 4%}.shelf{height:96px}.lamina{min-height:0}} </style><section class="lamina"><aside>RONDA　 /　 PROPUESTA GRÁFICA　 /　 Catálogo</aside><nav><a routerlink="/" class="marca"><i aria-hidden="true">◒</i> Ronda</a><div><a routerlink="/">Encuentros</a><a routerlink="/cuenta" class="nav-login">Ingresar ↗</a></div></nav><main><router-outlet></router-outlet><ng-component><header class="hero"><div><small>CLUB DE LECTURA</small><h1>Lecturas en común<span>.</span></h1><p>Encuentra tu próxima lectura y reserva un lugar en la conversación.</p></div><div aria-hidden="true" class="shelf"><i></i><i></i><i></i><i></i><i></i></div></header><section><div class="section-head"><h2>Encuentros</h2><a>Ver el de mayor capacidad ↗</a></div><div class="filtros"><input aria-label="Buscar por título" placeholder="Buscar por inicio del título…"><button class="activo" aria-pressed="true">Todos</button><button aria-pressed="false">Novela</button><button aria-pressed="false">Cuento</button><button aria-pressed="false">Poesía</button></div><div class="grid"><ronda-tarjeta><a class="tarjeta"><div class="portada selva"><i></i><b>La vorágine</b></div><div class="ficha"><small>Novela</small><h3>La vorágine</h3><p>Lunes · 4:00 p. m.</p><span>Ver encuentro →</span></div></a></ronda-tarjeta><ronda-tarjeta><a class="tarjeta"><div class="laberinto portada"><i></i><b>Ficciones</b></div><div class="ficha"><small>Cuento</small><h3>Ficciones</h3><p>Miércoles · 5:00 p. m.</p><span>Ver encuentro →</span></div></a></ronda-tarjeta><ronda-tarjeta><a class="tarjeta"><div class="luna portada"><i></i><b>Desolación</b></div><div class="ficha"><small>Poesía</small><h3>Desolación</h3><p>Viernes · 3:00 p. m.</p><span>Ver encuentro →</span></div></a></ronda-tarjeta><ronda-tarjeta><a class="tarjeta"><div class="portada valle"><i></i><b>María</b></div><div class="ficha"><small>Novela</small><h3>María</h3><p>Jueves · 4:00 p. m.</p><span>Ver encuentro →</span></div></a></ronda-tarjeta></div></section></ng-component><p role="status"></p></main><footer>Ronda · Club de lectura</footer></section><section class="lamina"><aside>RONDA　 /　 PROPUESTA GRÁFICA　 /　 Detalle</aside><nav><a routerlink="/" class="marca"><i aria-hidden="true">◒</i> Ronda</a><div><a routerlink="/">Encuentros</a><a routerlink="/cuenta" class="nav-login">Ingresar ↗</a></div></nav><main><router-outlet></router-outlet><ng-component><a routerlink="/">← Encuentros</a><div class="detalle"><div class="grande portada valle"><i></i><b>María</b></div><section><small>Novela</small><h1>María</h1><p>Recorremos el Valle del Cauca a través de los paisajes y los recuerdos de la novela de Jorge Isaacs.</p><p><strong>Jueves · 4:00 p. m.</strong><br>Sala Guadual</p><p>14 cupos en total </p><a routerlink="/cuenta" class="boton">Ingresar para reservar</a><p role="status"></p><h3>Lecturas relacionadas</h3><a class="enlace">La vorágine →</a><a class="enlace">Desolación →</a></section></div></ng-component><p role="status"></p></main><footer>Ronda · Club de lectura</footer></section><section class="lamina"><aside>RONDA　 /　 PROPUESTA GRÁFICA　 /　 Ingreso</aside><nav><a routerlink="/" class="marca"><i aria-hidden="true">◒</i> Ronda</a><div><a routerlink="/">Encuentros</a><a routerlink="/cuenta" class="nav-login">Ingresar ↗</a></div></nav><main><router-outlet></router-outlet><ng-component><section class="panel"><small>COMUNIDAD RONDA</small><h1>Ingresar</h1><form novalidate="" class="ng-untouched ng-pristine ng-invalid"><label>Correo electrónico<input type="email" name="correo" required="" autocomplete="email" class="ng-untouched ng-pristine ng-invalid"></label><label>Contraseña<input type="password" name="clave" required="" minlength="6" autocomplete="current-password" class="ng-untouched ng-pristine ng-invalid"></label><button class="boton">Ingresar</button></form><p role="status"></p><button>Crear una cuenta</button></section></ng-component><p role="status"></p></main><footer>Ronda · Club de lectura</footer></section><section class="lamina"><aside>RONDA　 /　 PROPUESTA GRÁFICA　 /　 Registro</aside><nav><a routerlink="/" class="marca"><i aria-hidden="true">◒</i> Ronda</a><div><a routerlink="/">Encuentros</a><a routerlink="/cuenta" class="nav-login">Ingresar ↗</a></div></nav><main><router-outlet></router-outlet><ng-component><section class="panel"><small>COMUNIDAD RONDA</small><h1>Crear cuenta</h1><form novalidate="" class="ng-untouched ng-pristine ng-invalid"><label>Nombre para el chat<input name="nombre" maxlength="40" required="" autocomplete="nickname" class="ng-untouched ng-pristine ng-invalid"></label><label>Correo electrónico<input type="email" name="correo" required="" autocomplete="email" class="ng-untouched ng-pristine ng-invalid"></label><label>Contraseña<input type="password" name="clave" required="" minlength="6" autocomplete="new-password" class="ng-untouched ng-pristine ng-invalid"></label><button class="boton">Registrarme</button></form><p role="status"></p><button>Ya tengo cuenta</button></section></ng-component><p role="status"></p></main><footer>Ronda · Club de lectura</footer></section><section class="lamina"><aside>RONDA　 /　 PROPUESTA GRÁFICA　 /　 Agenda</aside><nav><a class="marca">◒ Ronda</a><div>Encuentros　 Mi agenda　 Salir</div></nav><main><small>MI COMUNIDAD</small><h1>Mi agenda</h1><article class="fila"><div><small>Novela</small><h2>María</h2><p>Jueves · 4:00 p. m. · Sala Guadual</p></div><div><a class="enlace">Ver reserva</a><a class="boton">Abrir chat →</a></div></article></main><footer>Ronda · Club de lectura</footer></section><section class="lamina"><aside>RONDA　 /　 PROPUESTA GRÁFICA　 /　 Chat</aside><nav><a class="marca">◒ Ronda</a><div>Encuentros　 Mi agenda　 Salir</div></nav><main><a>← Mi agenda</a><section class="chat"><small>SALA DE CONVERSACIÓN</small><h1>María</h1><p>Conectado en tiempo real</p><div class="mensajes"><article><strong>Daniela</strong><p>¿Qué paisaje recuerdan del primer capítulo?</p></article><article class="mio"><strong>Valeri</strong><p>Me llamó la atención cómo describe el valle.</p></article></div><form><label>Tu mensaje<textarea></textarea></label><button class="boton">Enviar</button></form></section></main><footer>Ronda · Club de lectura</footer></section></html>
